@@ -170,9 +170,6 @@
                 </a>
               </div>
             </div>
-            <div class="btns">
-              <button class="prev btn"><span class="material-icons"> chevron_left </span></button> <button class="next btn"><span class="material-icons"> chevron_right </span></button>
-            </div>
           </li>
           <li class="visual02 swiper-slide">
             <div class="textBox">
@@ -256,6 +253,7 @@
           </li>
         </ul>
         <div class="pagination"></div>
+        <button class="prev btn"><span class="material-icons"> chevron_left </span></button> <button class="next btn"><span class="material-icons"> chevron_right </span></button>
       </div>
     </section>
     <!-- mainVisual end -->
@@ -319,6 +317,10 @@
                   <img src="../images/main/set-tag@2x.jpg" alt="" />
                   <img src="../images/main/best-tag_2@2x.jpg" alt="" />
                 </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
+                </div>
               </div>
               <div class="desc">
                 <a href=""
@@ -337,6 +339,10 @@
                 <a href=""><img src="../images/main/폴리젠 탈모완화 샴푸 500ml.jpg" alt="" /></a>
                 <div class="tag">
                   <img src="../images/main/best-tag_2@2x.jpg" alt="" />
+                </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
                 </div>
               </div>
               <div class="desc">
@@ -358,6 +364,10 @@
                   <img src="../images/main/new-tag@2x.jpg" alt="" />
                   <img src="../images/main/best-tag_2@2x.jpg" alt="" />
                 </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
+                </div>
               </div>
               <div class="desc">
                 <a href=""
@@ -377,6 +387,10 @@
                 <div class="tag">
                   <img src="../images/main/new-tag@2x.jpg" alt="" />
                   <img src="../images/main/best-tag_2@2x.jpg" alt="" />
+                </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
                 </div>
               </div>
               <div class="desc">
@@ -398,6 +412,10 @@
                   <img src="../images/main/new-tag@2x.jpg" alt="" />
                   <img src="../images/main/best-tag_2@2x.jpg" alt="" />
                 </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
+                </div>
               </div>
               <div class="desc">
                 <a href=""
@@ -413,10 +431,14 @@
             </li>
             <li class="swiper-slide">
               <div class="titleImg">
-                <a href=""><img src="../images/main/피로테라피 두피 케어 샴푸 500ml" alt="" /></a>
+                <a href=""><img src="../images/main/20_add1_056.jpg" alt="" /></a>
                 <div class="tag">
                   <img src="../images/main/new-tag@2x.jpg" alt="" />
                   <img src="../images/main/best-tag_2@2x.jpg" alt="" />
+                </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
                 </div>
               </div>
               <div class="desc">
@@ -437,6 +459,10 @@
                 <div class="tag">
                   <img src="../images/main/best-tag_2@2x.jpg" alt="" />
                 </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
+                </div>
               </div>
               <div class="desc">
                 <a href=""
@@ -456,6 +482,10 @@
                 <div class="tag">
                   <img src="../images/main/set-tag@2x.jpg" alt="" />
                 </div>
+                <div class="icons">
+                  <a href="" class="icon1"><span class="material-icons"> favorite_border </span></a>
+                  <a href="" class="icon2"><span class="material-icons"> shopping_cart </span></a>
+                </div>
               </div>
               <div class="desc">
                 <a href=""
@@ -472,9 +502,9 @@
           </ul>
         </div>
       </div>
-      <div class="btns">
-        <button class="prev btn"><span class="material-icons"> chevron_left </span></button> <button class="next btn"><span class="material-icons"> chevron_right </span></button>
-      </div>
+      <button class="prev btn"><span class="material-icons"> chevron_left </span></button>
+      <button class="next btn"><span class="material-icons"> chevron_right </span></button>
+      <div class="pagination"></div>
     </section>
     <script>
       new Swiper("#mainVisual .swiper", {
@@ -486,8 +516,8 @@
           clickable: true,
         },
         navigation: {
-          nextEl: "#mainVisual .swiper .next",
-          prevEl: "#mainVisual .swiper .prev",
+          nextEl: "#mainVisual .next",
+          prevEl: "#mainVisual .prev",
         },
         autoplay: {
           delay: 3000,
@@ -496,7 +526,17 @@
 
       new Swiper("#product .swiper", {
         slidesPerView: 4,
+        navigation: {
+          nextEl: "#product .next",
+          prevEl: "#product .prev",
+        },
+        pagination: {
+          el: "#product .pagination",
+          type: "bullets",
+          clickable: true,
+        },
       });
+
       const header = document.querySelector("#header");
       // const depth01s = document.querySelectorAll("#gnb .depth01");
       const onLists = document.querySelectorAll("#gnb .onList");

@@ -1,39 +1,9 @@
 @import "vars";
 @import "mixin";
-.btns {
-  .btn {
-    position: absolute;
-    top: 35%;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none;
-    border-radius: 100%;
-    &:hover {
-      transform: scale(1.15);
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease-in-out;
-      background-color: #ff0000;
-      .material-icons {
-        color: #fff;
-      }
-    }
-    &.prev {
-      left: 30px;
-    }
-    &.next {
-      right: 30px;
-    }
-    .material-icons {
-      color: #ccc;
-      font-size: 26px;
-    }
-  }
-}
 
 #mainVisual {
   .container {
-    width: 100vw;
+    max-width: 100vw;
     height: calc(100vh - 80px);
     position: relative;
     top: 80px;
@@ -57,9 +27,6 @@
                 font-size: 35px;
                 span {
                   margin-left: 10px;
-                }
-
-                span {
                   font-weight: 700;
                 }
               }
@@ -81,7 +48,6 @@
                   text-align: center;
                   line-height: 60px;
                   letter-spacing: 1.1px;
-
                   &:hover {
                     img {
                       transform: translateX(50px);
@@ -139,6 +105,34 @@
           transition: width 0.25s ease-in-out;
         }
       }
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 35%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 100%;
+    &:hover {
+      transform: scale(1.15);
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+      background-color: #ff0000;
+      .material-icons {
+        color: #fff;
+      }
+    }
+    &.prev {
+      left: 30px;
+    }
+    &.next {
+      right: 30px;
+    }
+    .material-icons {
+      color: #ccc;
+      font-size: 26px;
     }
   }
 }
@@ -239,9 +233,10 @@
 }
 //category 완성!!
 #product {
+  position: relative;
   .container {
-    width: 1100px;
-    margin: 250px auto 0 auto;
+    max-width: 1100px;
+    margin: 250px auto 100px auto;
     .titleBox {
       display: flex;
       align-items: flex-end;
@@ -305,55 +300,12 @@
           .titleImg {
             position: relative;
             transition: all 0.25s ease-in-out;
-            &::before {
-              content: "\e87e";
-              font-family: "Material Icons";
-              font-size: 24px;
-              display: block;
-              position: absolute;
-              bottom: 20px;
-              right: 80px;
-              width: 45px;
-              height: 45px;
-              border-radius: 100%;
-              background-color: rgba(0, 0, 0, 0.1);
-              line-height: 45px;
-              text-align: center;
-              opacity: 0;
-              transition: all 0.25s ease-in-out;
-              &:hover {
-                color: #f00;
-              }
-            }
-            &:after {
-              content: "\e8cc";
-              font-family: "Material Icons";
-              font-size: 24px;
-              display: block;
-              position: absolute;
-              bottom: 20px;
-              right: 30px;
-              width: 45px;
-              height: 45px;
-              border-radius: 100%;
-              background-color: rgba(0, 0, 0, 0.1);
-              line-height: 45px;
-              text-align: center;
-              opacity: 0;
-              transition: all 0.25s ease-in-out;
-              &:hover {
-                color: #f00;
-              }
-            }
             &:hover {
               animation-name: filterAnimation;
               animation-duration: 1.5s;
               animation-iteration-count: 1;
-              &::after {
-                opacity: 1;
-              }
-              &::before {
-                opacity: 1;
+              .icons {
+                display: block;
               }
             }
             a {
@@ -372,6 +324,42 @@
                 display: block;
                 width: 45px;
                 height: 25px;
+              }
+            }
+            .icons {
+              display: none;
+              color: #fff;
+              .icon1 {
+                display: block;
+                position: absolute;
+                bottom: 20px;
+                right: 80px;
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                background-color: rgba(0, 0, 0, 0.1);
+                line-height: 60px;
+                text-align: center;
+                transition: all 0.25s ease-in-out;
+                &:hover {
+                  color: #f00;
+                }
+              }
+              .icon2 {
+                display: block;
+                position: absolute;
+                bottom: 20px;
+                right: 30px;
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                background-color: rgba(0, 0, 0, 0.1);
+                line-height: 60px;
+                text-align: center;
+                transition: all 0.25s ease-in-out;
+                &:hover {
+                  color: #f00;
+                }
               }
             }
           }
@@ -418,6 +406,63 @@
             }
           }
         }
+      }
+    }
+  }
+  .btn {
+    position: absolute;
+    top: 35%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #aaa;
+    background-color: transparent;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out;
+    z-index: 200;
+    &:hover {
+      transform: scale(1.15);
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      background-color: #ff0000;
+      border: none;
+      .material-icons {
+        color: #fff;
+      }
+    }
+    &.prev {
+      left: 30px;
+    }
+    &.next {
+      right: 30px;
+    }
+    .material-icons {
+      color: #aaa;
+      font-size: 26px;
+    }
+  }
+  .pagination {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    max-width: 1100px;
+    height: 50px;
+    display: flex;
+    .swiper-pagination-bullet {
+      width: 1100px;
+      height: 4px;
+      border-radius: 0;
+      opacity: 1;
+      background-color: #ccc;
+      transition: all 0.25s ease-in-out;
+      position: relative;
+      &:after {
+        @include pseudo;
+        @include box(0, 100%, #f00);
+      }
+      &-active::after {
+        width: 100%;
+        transition: width 0.25s ease-in-out;
       }
     }
   }
