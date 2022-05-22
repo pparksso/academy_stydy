@@ -154,14 +154,69 @@
 
 #category .container .contents .txt { font-weight: 700; font-size: 15px; transition: all 0.25s ease-in-out; }
 
-#product .container { width: 1500px; margin: 250px auto 0 auto; }
+#product .container { width: 1100px; margin: 250px auto 0 auto; }
 
-#product .container .titleBox { display: flex; margin-bottom: 30px; }
+#product .container .titleBox { display: flex; align-items: flex-end; margin-bottom: 30px; }
 
 #product .container .titleBox h2 { font-size: 40px; font-weight: 800; position: relative; margin-right: 70px; }
 
 #product .container .titleBox h2::after { content: ""; display: block; position: absolute; bottom: 23%; right: -2%; width: 7px; height: 7px; background-color: #f00; }
 
-#product .container .titleBox .period { display: flex; font-size: 20px; font-weight: 500; }
+#product .container .titleBox .period { display: flex; padding-bottom: 10px; font-size: 20px; }
 
-#product .container .titleBox .period .week a { color: #f00; border-bottom: 2px solid #f00; }
+#product .container .titleBox .period .week a { color: #f00; border-bottom: 2px solid #f00; margin-right: 15px; font-weight: 500; }
+
+#product .container .titleBox .period .month a { color: #c6c6c6; font-weight: 300; }
+
+#product .container .titleBox .view { margin: 0 20px 0 auto; }
+
+#product .container .titleBox .view a { display: block; padding: 12px 20px; border: 1px solid #bbb; border-radius: 30px; font-size: 16px; font-weight: 700; }
+
+#product .container .titleBox .view a img { width: 29px; margin-left: 5px; }
+
+#product .container .inner ul { display: flex; }
+
+#product .container .inner ul li .titleImg { position: relative; transition: all 0.25s ease-in-out; }
+
+#product .container .inner ul li .titleImg::before { content: "\e87e"; font-family: "Material Icons"; font-size: 24px; display: block; position: absolute; bottom: 20px; right: 80px; width: 45px; height: 45px; border-radius: 100%; background-color: rgba(0, 0, 0, 0.1); line-height: 45px; text-align: center; opacity: 0; transition: all 0.25s ease-in-out; }
+
+#product .container .inner ul li .titleImg::before:hover { color: #f00; }
+
+#product .container .inner ul li .titleImg:after { content: "\e8cc"; font-family: "Material Icons"; font-size: 24px; display: block; position: absolute; bottom: 20px; right: 30px; width: 45px; height: 45px; border-radius: 100%; background-color: rgba(0, 0, 0, 0.1); line-height: 45px; text-align: center; opacity: 0; transition: all 0.25s ease-in-out; }
+
+#product .container .inner ul li .titleImg:after:hover { color: #f00; }
+
+#product .container .inner ul li .titleImg:hover { animation-name: filterAnimation; animation-duration: 1.5s; animation-iteration-count: 1; }
+
+#product .container .inner ul li .titleImg:hover::after { opacity: 1; }
+
+#product .container .inner ul li .titleImg:hover::before { opacity: 1; }
+
+#product .container .inner ul li .titleImg a img { width: 260px; height: 260px; border-radius: 0 0 30px 0; }
+
+#product .container .inner ul li .titleImg .tag { position: absolute; bottom: -5px; left: 0; display: flex; }
+
+#product .container .inner ul li .titleImg .tag img { display: block; width: 45px; height: 25px; }
+
+#product .container .inner ul li .desc { display: block; margin: 30px 0 5px 0; }
+
+#product .container .inner ul li .desc a { line-height: 1.7; }
+
+#product .container .inner ul li .desc a strong { font-size: 18px; font-weight: 700; }
+
+#product .container .inner ul li .desc a p { color: #999; font-size: 16px; }
+
+#product .container .inner ul li .price { pointer-events: none; }
+
+#product .container .inner ul li .price strong { font-weight: 700; font-size: 21px; color: #f00; }
+
+#product .container .inner ul li .price strong span { font-weight: 100; font-size: 15px; }
+
+#product .container .inner ul li .price small { font-weight: 700; font-size: 15px; color: #bbb; text-decoration-line: line-through; }
+
+#product .container .inner ul li .price small span { font-size: 13px; font-weight: 100; }
+
+#product .container .inner ul li .price span { font-size: 22px; font-weight: 800; }
+
+@keyframes filterAnimation { 0% { filter: brightness(110%); }
+  100% { filter: brightness(100%); } }
