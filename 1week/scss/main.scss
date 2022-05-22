@@ -262,17 +262,27 @@
         padding-bottom: 10px;
         font-size: 20px;
         .week {
-          a {
+          .weekBtn {
             color: #f00;
             border-bottom: 2px solid #f00;
             margin-right: 15px;
             font-weight: 500;
+            &.on {
+              color: #c6c6c6;
+              font-weight: 300;
+              border: none;
+            }
           }
         }
         .month {
-          a {
+          .monthBtn {
             color: #c6c6c6;
             font-weight: 300;
+            &.on {
+              color: #f00;
+              border-bottom: 2px solid #f00;
+              font-weight: 500;
+            }
           }
         }
       }
@@ -293,120 +303,136 @@
       }
     }
     .inner {
-      ul {
-        display: flex;
+      .pannel {
+        overflow: hidden;
 
-        li {
-          .titleImg {
-            position: relative;
-            transition: all 0.25s ease-in-out;
-            &:hover {
-              animation-name: filterAnimation;
-              animation-duration: 1.5s;
-              animation-iteration-count: 1;
+        ul {
+          display: flex;
+          li {
+            .titleImg {
+              position: relative;
+              transition: all 0.25s ease-in-out;
+              &.on {
+              }
+              &:hover {
+                animation-name: filterAnimation;
+                animation-duration: 1.5s;
+                animation-iteration-count: 1;
+                .icons {
+                  display: block;
+                }
+              }
+              a {
+                img {
+                  width: 260px;
+                  height: 260px;
+                  border-radius: 0 0 30px 0;
+                }
+              }
+              .tag {
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                display: flex;
+                img {
+                  display: block;
+                  width: 45px;
+                  height: 25px;
+                }
+              }
               .icons {
-                display: block;
-              }
-            }
-            a {
-              img {
-                width: 260px;
-                height: 260px;
-                border-radius: 0 0 30px 0;
-              }
-            }
-            .tag {
-              position: absolute;
-              bottom: -5px;
-              left: 0;
-              display: flex;
-              img {
-                display: block;
-                width: 45px;
-                height: 25px;
-              }
-            }
-            .icons {
-              display: none;
-              color: #fff;
-              .icon1 {
-                display: block;
-                position: absolute;
-                bottom: 20px;
-                right: 80px;
-                width: 45px;
-                height: 45px;
-                border-radius: 100%;
-                background-color: rgba(0, 0, 0, 0.1);
-                line-height: 60px;
-                text-align: center;
-                transition: all 0.25s ease-in-out;
-                &:hover {
-                  color: #f00;
+                display: none;
+                color: #fff;
+                .icon1 {
+                  display: block;
+                  position: absolute;
+                  bottom: 20px;
+                  right: 80px;
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 100%;
+                  background-color: rgba(0, 0, 0, 0.1);
+                  line-height: 60px;
+                  text-align: center;
+                  transition: all 0.25s ease-in-out;
+                  &:hover {
+                    color: #f00;
+                  }
                 }
-              }
-              .icon2 {
-                display: block;
-                position: absolute;
-                bottom: 20px;
-                right: 30px;
-                width: 45px;
-                height: 45px;
-                border-radius: 100%;
-                background-color: rgba(0, 0, 0, 0.1);
-                line-height: 60px;
-                text-align: center;
-                transition: all 0.25s ease-in-out;
-                &:hover {
-                  color: #f00;
+                .icon2 {
+                  display: block;
+                  position: absolute;
+                  bottom: 20px;
+                  right: 30px;
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 100%;
+                  background-color: rgba(0, 0, 0, 0.1);
+                  line-height: 60px;
+                  text-align: center;
+                  transition: all 0.25s ease-in-out;
+                  &:hover {
+                    color: #f00;
+                  }
                 }
               }
             }
-          }
-          .desc {
-            display: block;
-            margin: 30px 0 5px 0;
+            .desc {
+              display: block;
+              margin: 30px 0 5px 0;
 
-            a {
-              line-height: 1.7;
+              a {
+                line-height: 1.7;
+                strong {
+                  font-size: 18px;
+                  font-weight: 700;
+                }
+                p {
+                  color: #999;
+                  font-size: 16px;
+                }
+              }
+            }
+            .price {
+              pointer-events: none;
               strong {
-                font-size: 18px;
                 font-weight: 700;
+                font-size: 21px;
+                color: #f00;
+                span {
+                  font-weight: 100;
+                  font-size: 15px;
+                }
               }
-              p {
-                color: #999;
-                font-size: 16px;
-              }
-            }
-          }
-          .price {
-            pointer-events: none;
-            strong {
-              font-weight: 700;
-              font-size: 21px;
-              color: #f00;
-              span {
-                font-weight: 100;
+              small {
+                font-weight: 700;
                 font-size: 15px;
+                color: #bbb;
+                text-decoration-line: line-through;
+                span {
+                  font-size: 13px;
+                  font-weight: 100;
+                }
               }
-            }
-            small {
-              font-weight: 700;
-              font-size: 15px;
-              color: #bbb;
-              text-decoration-line: line-through;
               span {
-                font-size: 13px;
-                font-weight: 100;
+                font-size: 22px;
+                font-weight: 800;
               }
-            }
-            span {
-              font-size: 22px;
-              font-weight: 800;
             }
           }
         }
       }
+    }
+  }
+  #weekly {
+    &.on {
+      display: none;
+    }
+  }
+  #monthly {
+    display: none;
+    &.on {
+      display: block;
     }
   }
   .btn {
