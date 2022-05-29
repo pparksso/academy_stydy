@@ -2,8 +2,8 @@
 @import "mixin";
 
 #mainVisual {
-  position: relative;
   height: 800px;
+  position: relative;
   .mainTitle {
     position: absolute;
     top: 50%;
@@ -11,9 +11,9 @@
     transform: translate(-50%);
     h2 {
       font-size: 60px;
+      font-weight: 700;
       color: #000;
       line-height: 1.5;
-      font-weight: 700;
     }
   }
 }

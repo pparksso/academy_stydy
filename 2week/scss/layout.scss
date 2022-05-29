@@ -3,35 +3,35 @@
 
 body {
   font-family: "Lexend", "Noto Sans KR", sans-serif;
-  color: #555;
   font-size: 14px;
+  color: #555;
 }
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 .blind {
   display: none;
 }
 #header {
   width: 100%;
+  height: 80px;
   position: fixed;
   z-index: 1000;
   overflow: hidden;
-  height: 80px;
   transition: all 0.3s ease-in;
   background-color: #fff;
   &:after {
-    content: "";
     display: inline-block;
     width: 100%;
     height: 1px;
-    background-color: #e9e9e9;
     position: absolute;
     top: 80px;
     left: 0;
     transform: scale(0);
     transition: transform 1.5s ease;
+    content: "";
+    background-color: #e9e9e9;
   }
   &:hover {
     height: 230px;
@@ -54,20 +54,20 @@ a {
         display: flex;
         justify-content: space-between;
         > li {
+          width: 94px;
           position: relative;
           text-align: center;
-          width: 94px;
           &:after {
-            content: "";
             display: block;
+            width: 0px;
+            height: 2px;
             position: absolute;
             top: 79px;
             left: 0;
-            width: 0px;
-            height: 2px;
             z-index: 2;
-            background-color: $main-color;
             transition: all 0.25s ease-in;
+            content: "";
+            background-color: $main-color;
           }
           &:hover {
             &:after {
@@ -76,14 +76,14 @@ a {
           }
           .depth01 {
             display: inline-block;
-            height: 80px;
             width: 94px;
-            line-height: 80px;
+            height: 80px;
+            position: relative;
             font-size: $font-small;
             font-weight: 600;
             color: #222;
+            line-height: 80px;
             transition: all 0.2s ease;
-            position: relative;
             &:hover {
               color: $main-color;
             }
@@ -92,9 +92,9 @@ a {
             padding-top: 20px;
             text-align: center;
             li {
+              padding: 10px 0;
               font-weight: 600;
               color: #222;
-              padding: 10px 0;
               &:hover {
                 color: $main-color;
               }
@@ -107,35 +107,35 @@ a {
   .purunet {
     line-height: 80px;
     a {
-      color: $main-color;
+      margin-right: 15px;
       font-size: $font-nomal;
       font-weight: 600;
-      margin-right: 15px;
+      color: $main-color;
       span {
         position: relative;
         &:before {
-          content: "";
           display: block;
-          position: absolute;
           width: 18px;
           height: 2px;
-          background-color: $main-color;
+          position: absolute;
           top: 50%;
-          transform: translateY(-50%);
           left: 15px;
+          transform: translateY(-50%);
+          content: "";
+          background-color: $main-color;
         }
         &:after {
-          content: "";
           display: block;
-          position: absolute;
-          border: 2px solid $main-color;
           width: 8px;
           height: 8px;
+          position: absolute;
+          top: 48%;
+          left: 20px;
+          border: 2px solid $main-color;
           border-bottom: none;
           border-left: none;
           transform: rotate(45deg) translateY(-50%);
-          top: 48%;
-          left: 20px;
+          content: "";
         }
       }
     }
@@ -143,13 +143,13 @@ a {
 }
 #footer {
   width: 100%;
-  background-color: #f4f4f4;
   padding: 50px 0 80px 0;
+  background-color: #f4f4f4;
   .footerWrap {
-    width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
     .infoBox {
       .infoLinkBox {
         font-size: 15px;
@@ -182,8 +182,8 @@ a {
         .snsHover {
           display: flex;
           position: absolute;
-          left: 0;
           top: 0;
+          left: 0;
           li {
             margin-right: 5px;
             img {
@@ -212,14 +212,14 @@ a {
           margin-right: 50px;
           a {
             display: inline-block;
+            position: relative;
             margin-bottom: 15px;
             color: #6d7683;
-            position: relative;
             &:after {
-              content: url("../images/layout/icon-fav-2.png");
               position: absolute;
               top: 0;
               right: -20px;
+              content: url("../images/layout/icon-fav-2.png");
             }
           }
         }
