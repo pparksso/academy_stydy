@@ -1,0 +1,190 @@
+@import "vars";
+@import "mixin";
+
+.board {
+  width: 1200px;
+  margin: 0 auto 100px auto;
+  .boardTitle {
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #000;
+      margin: 100px 0 20px 0;
+    }
+    .boardTitleDesc {
+      margin-bottom: 50px;
+      p {
+        line-height: 1.5;
+        font-size: 16px;
+        span {
+          color: #ff8a33;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+form {
+  dl {
+    dt {
+      font-size: $font-nomal -1px;
+      margin-bottom: 15px;
+      display: inline-block;
+      &.required {
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          background-color: #ff8a33;
+          border-radius: 100%;
+          position: absolute;
+          top: -2px;
+          right: -13px;
+        }
+      }
+    }
+    dd {
+      font-size: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      .privacy {
+        width: 1200px;
+        height: 180px;
+        overflow: hidden auto;
+        padding: 30px;
+        border: 1px solid #e6e8ea;
+        font-size: 15px;
+        font-weight: 300;
+        border-radius: 8px;
+        color: #000;
+        letter-spacing: 1.2px;
+        p {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .agreeBtn {
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f2f4f6;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  padding: 0;
+  position: absolute;
+}
+input[type="text"] {
+  width: 500px;
+  font-family: "Noto Sans KR";
+  outline: none;
+  border: 1px solid #e6e8ea;
+  padding: 11px 17px;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 8px;
+  &:focus {
+    border-color: #2b66f6;
+  }
+  &.zipCode {
+    width: 350px;
+  }
+}
+textarea {
+  width: 1200px;
+  height: 200px;
+  font-family: "Noto Sans KR";
+  outline: none;
+  border: 1px solid #e6e8ea;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 11px 17px;
+  resize: none;
+}
+label {
+  &.interest {
+    width: 240px;
+    margin-bottom: 25px;
+    span {
+      display: flex;
+      align-items: center;
+      &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid #e6e8ea;
+        margin-right: 5px;
+        box-sizing: border-box;
+      }
+    }
+  }
+  &.route {
+    margin-right: 30px;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #e6e8ea;
+        box-sizing: border-box;
+        margin-right: 5px;
+      }
+    }
+  }
+  .zipCodeBtn {
+    color: #fff;
+    padding: 10px 11px;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 120px;
+    background-color: $main-color;
+    font-size: 13px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: #fff;
+      border: 1px solid $main-color;
+      color: $main-color;
+    }
+  }
+}
+input[type="radio"]:checked ~ span::before {
+  background-color: #2b66f6;
+  border: none;
+}
+input[type="checkbox"]:checked ~ span::before {
+  content: "\e5cf";
+  font-family: "Material Icons";
+  background-color: $main-color;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

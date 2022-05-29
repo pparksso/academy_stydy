@@ -1,0 +1,29 @@
+#subHeader { position: relative; width: 100%; height: 450px; }
+
+#subHeader:after { content: ""; width: 100%; height: 1px; display: block; background-color: #ddd; position: absolute; bottom: 0; left: 0; z-index: -2; }
+
+#subHeader .subHeaderInner { width: 1200px; height: 100%; margin: 0 auto; display: flex; flex-direction: column; justify-content: center; position: relative; }
+
+#subHeader .subHeaderInner .subTitle { font-size: 38px; color: #000; font-weight: 700; line-height: 1.5; margin: auto 0; }
+
+#subHeader .subHeaderInner .subCategory { width: 100%; height: 73px; display: flex; justify-content: space-between; align-items: center; position: absolute; bottom: 0; left: 0; }
+
+#subHeader .subHeaderInner .subCategory .subMenuWrap ul { display: flex; align-items: center; font-size: 16px; }
+
+#subHeader .subHeaderInner .subCategory .subMenuWrap ul li { margin-right: 50px; height: 73px; line-height: 73px; box-sizing: border-box; }
+
+#subHeader .subHeaderInner .subCategory .subMenuWrap ul li.active { border-bottom: 2px solid #000; }
+
+#subHeader .subHeaderInner .subCategory .subMenuWrap ul li a { position: relative; height: 73px; padding: 25px 0; }
+
+#subHeader .subHeaderInner .subCategory .subMenuWrap ul li a:after { content: ""; display: none; position: absolute; width: 100%; height: 2px; background-color: #bbb; bottom: -2px; left: 0; z-index: -1; }
+
+#subHeader .subHeaderInner .subCategory .subMenuWrap ul li a:hover:after { display: block; }
+
+#subHeader .subHeaderInner .subCategory .breadCrumb { display: flex; font-size: 12px; text-transform: uppercase; }
+
+#subHeader .subHeaderInner .subCategory .breadCrumb h3 { position: relative; }
+
+#subHeader .subHeaderInner .subCategory .breadCrumb h3:after { content: "\e5cc"; font-family: "Material Icons"; font-size: 13px; position: absolute; bottom: 0; right: -26px; }
+
+#subHeader .subHeaderInner .subCategory .breadCrumb span { margin-left: 40px; }

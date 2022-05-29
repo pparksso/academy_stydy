@@ -20,6 +20,7 @@ a {
   overflow: hidden;
   height: 80px;
   transition: all 0.3s ease-in;
+  background-color: #fff;
   &:after {
     content: "";
     display: inline-block;
@@ -135,6 +136,92 @@ a {
           transform: rotate(45deg) translateY(-50%);
           top: 48%;
           left: 20px;
+        }
+      }
+    }
+  }
+}
+#footer {
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 50px 0 80px 0;
+  .footerWrap {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .infoBox {
+      .infoLinkBox {
+        font-size: 15px;
+        color: #b2b8c0;
+        a {
+          margin-right: 30px;
+        }
+      }
+      .addressBox {
+        margin: 50px 0 30px 0;
+        .fLogo {
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 13px;
+          line-height: 1.5;
+        }
+      }
+      .snsBox {
+        position: relative;
+        ul {
+          display: flex;
+          li {
+            margin-right: 5px;
+            img {
+              cursor: pointer;
+            }
+          }
+        }
+        .snsHover {
+          display: flex;
+          position: absolute;
+          left: 0;
+          top: 0;
+          li {
+            margin-right: 5px;
+            img {
+              width: 36px;
+              height: 36px;
+              opacity: 0;
+              cursor: pointer;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .familySite {
+      width: 300px;
+      strong {
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .familySiteLinkWrap {
+        display: flex;
+        margin-top: 25px;
+        .familySiteLink {
+          margin-right: 50px;
+          a {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #6d7683;
+            position: relative;
+            &:after {
+              content: url("../images/layout/icon-fav-2.png");
+              position: absolute;
+              top: 0;
+              right: -20px;
+            }
+          }
         }
       }
     }

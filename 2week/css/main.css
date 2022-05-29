@@ -1,0 +1,5 @@
+#mainVisual { position: relative; height: 800px; }
+
+#mainVisual .mainTitle { position: absolute; top: 50%; left: 50%; transform: translate(-50%); }
+
+#mainVisual .mainTitle h2 { font-size: 60px; color: #000; line-height: 1.5; font-weight: 700; }
